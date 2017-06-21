@@ -36,18 +36,18 @@
                   console.log('success');
               }
           });
-      ```
-    # 必须有的 全局变量
-    ```html
+```
+# 必须有的 全局变量
+```html
      window.serverData={
             'show_zzc_app':'{show_zzc_app}',//zzc app
             'show_wx_jsdk':'{show_wx_jsdk}',//是否是微
         };
-    ```
+```
 
-  # 按钮点击调取分享例子
-  ```html
+# 按钮点击调取分享例子
+```html
   $('.J-click-share').on('click',function () {
               myshare.share();
           })
-  ```
+```
