@@ -1,8 +1,7 @@
 # 此项目集合了公司pp分享 和 微信分享的功能
 
 # 项目依赖
->
- ```html
+```html
  <script src="//m.zuzuche.com/js/zepto-all.min.js"></script>
       <!-- IF show_wx_jsdk -->
       <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -11,10 +10,10 @@
       <script src="//m.zuzuche.com/static/bundles/zzcjssdk/zzc-1.1.0.js"></script>
       <!-- ENDIF -->
       <script src="//m.zuzuche.com/w/tidl/static/build/js/rem.min.js"></script>
-  ```
+```
 
-  # 使用参数配置
-  ```
+# 使用参数配置
+```html
    var myshare = new ZZCShare({
               appId: '{jssdk_sign.appId}',
               timestamp: '{jssdk_sign.timestamp}',
@@ -39,7 +38,7 @@
           });
       ```
     # 必须有的 全局变量
-    ```
+    ```html
      window.serverData={
             'show_zzc_app':'{show_zzc_app}',//zzc app
             'show_wx_jsdk':'{show_wx_jsdk}',//是否是微
@@ -47,7 +46,7 @@
     ```
 
   # 按钮点击调取分享例子
-  ```
+  ```html
   $('.J-click-share').on('click',function () {
               myshare.share();
           })
