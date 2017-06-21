@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testSHARE</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <script src="//m.zuzuche.com/js/zepto-all.min.js"></script>
+    <!-- IF show_wx_jsdk -->
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- ENDIF -->
+    <!-- IF show_zzc_app -->
+    <script src="//m.zuzuche.com/static/bundles/zzcjssdk/zzc-1.1.0.js"></script>
+    <!-- ENDIF -->
+    <script src="//m.zuzuche.com/w/tidl/static/build/js/rem.min.js"></script>
+    <script src="index.js"></script>
+
+
+</head>
+<body>
+<h2 class="J-click-share">test weixin share</h2>
+</body>
+</html>
+<script>
+    window.serverData={
+        'show_zzc_app':'{show_zzc_app}',//zzc app
+        'show_wx_jsdk':'{show_wx_jsdk}',//是否是微
+    };
+    $(function () {
+
+        var myshare = new ZZCShare({
+            appId: '{jssdk_sign.appId}',
+            timestamp: '{jssdk_sign.timestamp}',
+            nonceStr: '{jssdk_sign.nonceStr}',
+            signature: '{jssdk_sign.signature}',
+            imgUrl: 'http://pic24.nipic.com/20120831/10132780_100453579000_2.jpg',
+            title: '租租车-精彩不断！',
+            desc: '这是发送给朋友的描述信息',
+            link: 'http://m.zuzuche.com',
+            shareList:[
+                "menuItem:share:appMessage",
+                "menuItem:share:timeline",
+                "menuItem:share:qq"
+            ],
+            appShareList:[
+                'wxsession',
+                'wxtimeline',
+            ],
+            success: function(){
+                console.log('success');
+            }
+        });
+
+        $('.J-click-share').on('click',function () {
+            myshare.share();
+        })
+    });
+
+
+</script>
